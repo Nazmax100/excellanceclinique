@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinique Excellence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Style de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #f3e5f5, #e1bee7);
+            color: #333;
+        }
+
+        /* Section Image */
+        .image-section img {
+            width: 100vw;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #4a148c;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero .cta {
+            background-color: #7b1fa2;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .cta:hover {
+            background-color: #4a148c;
+        }
+
+        /* Services Cards */
+        .services-cards {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+            gap: 40px;
+        }
+
+        .service-card {
+            background: rgba(123, 31, 162, 0.8);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            flex: 1;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+        }
+
+        /* About Section */
+        .about {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .about-card {
+            background: rgba(123, 31, 162, 0.9);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            text-align: center;
+        }
+
+        /* Form Section */
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(123, 31, 162, 0.8);
+            border-radius: 15px;
+            color: #fff;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #7b1fa2;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #4a148c;
+        }
+
+        /* Contact Section */
+        .contact {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .contact-card {
+            background: rgba(123, 31, 162, 0.9);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #7b1fa2;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 30px 10px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .services-cards {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .service-card {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .about-card, .contact-card {
+                padding: 20px;
+            }
+
+            .form-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            footer {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Section Image -->
+<section class="image-section">
+    <img src="https://scontent.falg5-1.fna.fbcdn.net/v/t39.30808-6/456570761_122111852876451617_2326203514092562541_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Arpe2BSVTocQ7kNvgFinQ_k&_nc_zt=23&_nc_ht=scontent.falg5-1.fna&_nc_gid=A1ZPEM6w9ee5gU_E_MRdCQQ&oh=00_AYAK8P8BT_bAMov4tFpnZXMCz9YM8TjhCoPs0hssY33XZg&oe=671DF0C1" alt="Image de la Clinique">
+</section>
+
+<!-- Section Accueil -->
+<section id="accueil" class="hero">
+    <h1>Bienvenue à la Clinique Excellence</h1>
+    <p>Votre santé visuelle, notre priorité.</p>
+    <a href="#reservation" class="cta">Réservez un rendez-vous</a>
+
+    <!-- Services Cards -->
+    <div class="services-cards">
+        <div class="service-card">
+            <h3>Examen de la vue</h3>
+            <p>Nous proposons des examens complets pour évaluer votre santé oculaire.</p>
+        </div>
+        <div class="service-card">
+            <h3>Traitements spécialisés</h3>
+            <p>Nos experts fournissent des traitements adaptés à vos besoins.</p>
+        </div>
+        <div class="service-card">
+            <h3>Consultations</h3>
+            <p>Réservez une consultation avec nos professionnels qualifiés.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Section À propos -->
+<section id="apropos" class="about">
+    <div class="about-card">
+        <h2>À propos de nous</h2>
+        <p>La Clinique Excellence offre des soins oculaires de qualité supérieure avec une équipe d'experts dans le domaine.</p>
+    </div>
+</section>
+
+<!-- Section Réservation -->
+<section id="reservation" class="form-container">
+    <h2>Réservation de Rendez-vous</h2>
+    <form id="booking-form" onsubmit="return validateForm()">
+        <label for="name">Nom Complet</label>
+        <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Entrez votre e-mail" required>
+
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone" required>
+
+        <button type="submit">Réserver</button>
+    </form>
+</section>
+<!-- Section Contact -->
+<section id="contact" class="contact">
+    <div class="contact-card">
+        <h2>Contactez-nous</h2>
+        <p>Pour toute question, appelez-nous au :</p>
+        <p><strong>0560 29 32 62</strong></p>
+        <!-- Social Media Card -->
+<div style="border: 1px solid #ccc; border-radius: 10px; padding: 20px; margin-top: 20px; text-align: center; background-color: #f9f9f9;">
+    <h3 style="margin-bottom: 15px; color: purple;">Réseaux sociaux</h3>
+    <div>
+        <a href="https://www.facebook.com/profile.php?id=61563548529118" target="_blank" style="text-decoration: none; margin: 0 10px;">
+            <img src="https://img.icons8.com/material-outlined/64/000000/facebook-new.png" alt="Facebook" style="width: 50px; height: 50px; transition: transform 0.3s;">
+        </a>
+        <a href="https://www.instagram.com/excellence_clinique/" target="_blank" style="text-decoration: none; margin: 0 10px;">
+            <img src="https://img.icons8.com/material-outlined/64/000000/instagram-new.png" alt="Instagram" style="width: 50px; height: 50px; transition: transform 0.3s;">
+        </a><!DOCTYPE html>
+        <html lang="fr">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Excellence Clinique</title>
+          <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+
+
+        </body>
+        </html>
+        
+    </div>
+</div>
+
+<style>
+    a:hover img {
+        transform: scale(1.2); 
+    }
+</style>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer style="background-color: purple; color: white; text-align: center; padding: 10px 0; font-size: 0.8em;">
+</div>
+<p style="margin: 0;">Excellance clinique 2024 </p>
+    </div>
+    <p style="margin: 0;">by lebbal nazim </p>
+</footer>
